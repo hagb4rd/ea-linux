@@ -1,0 +1,11 @@
+#!/bin/bash
+echo firefox..
+wget https://download.mozilla.org/?product=firefox-esr-next-latest-ssl&os=linux64&lang=en-US
+echo torbrowser..
+wget https://www.torproject.org/dist/torbrowser/8.5.5/tor-browser-linux64-8.5.5_en-US.tar.xz
+echo dncrypt-proxy..
+wget https://github.com/DNSCrypt/dnscrypt-proxy/releases/download/2.0.27/dnscrypt-proxy-linux_x86_64-2.0.27.tar.gz
+echo vscode ..
+wget https://az764295.vo.msecnd.net/stable/b37e54c98e1a74ba89e03073e5a3761284e3ffb0/code_1.38.1-1568209190_amd64.deb
+echo virtualbox ..
+wget https://download.virtualbox.org/virtualbox/6.0.12/virtualbox-6.0_6.0.12-133076~Debian~stretch_amd64.deb

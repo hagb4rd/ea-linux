@@ -1,0 +1,14 @@
+#!/bin/bash
+args=($*)
+namespace="${args[0]:-ff}"
+location="${args[1]:-~/Downloads}"
+firejail --ls=$namespace "${location:-~/Downloads}" | while read line
+do
+	split=($line)
+	filename="${split[-1]}"
+	if [[ "$filename" != "." ]] && [[ "$filename" != ".." ]]; then
+		filepath="$location"/"${split[-1]}"
+		echo $filepath
+		firejail --get=$namespace "$filepath"
+	fi
+done

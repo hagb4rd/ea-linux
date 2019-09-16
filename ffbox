@@ -1,0 +1,53 @@
+#!/bin/bash
+#firejail --name=fire --noprofile --x11=xephyr  --net=enp1s5 --netfilter=/etc/firejail/nolocal.net --private firefox &
+
+# https://anyon3.github.io/firejail.html
+
+# torsocks not working
+# ---------------------
+#firejail --name=ff --noprofile  --x11=xephyr  --machine-id  --private-home=.mozilla --whitelist=~/Downloads --noroot --caps.drop=all --seccomp --private-dev --private-tmp --env=LD_PRELOAD=/usr/lib/x86_64-linux-gnu/torsocks/libtorsocks.so /usr/lib/firefox-esr/firefox-bin  -profile  ~/.mozilla/firefox/i0yfleeu.default-esr  $* & 
+
+arr=(
+	"--name=ffbox"
+	"--noprofile"
+	"--x11=xephyr"
+	"--nogroups"
+	#"--net=enp1s5"
+	"--net=enp3s0"
+	"--netfilter=/etc/firejail/nolocal.net"
+	#"--ip=192.168.178.20"
+	#"--dns=192.168.178.22"
+	"--machine-id"
+	"--private=~/firejail/"
+	"--whitelist=~/Downloads"
+	"--noroot"
+	"--caps.drop=all"
+	"--seccomp" 
+	"--private-dev"
+	"--private-tmp"
+	"--ipc-namespace"
+	#"--env=LD_PRELOAD=/usr/lib/x86_64-linux-gnu/torsocks/libtorsocks.so"
+	#"torify"
+	#"/usr/lib/firefox-esr/firefox-bin"
+	#"-P"
+	#"~/.mozilla/firefox/i0yfleeu.default-esr"
+	"fluxbox"
+	"$*"
+)
+echo firejail "${arr[@]}"
+firejail "${arr[@]}" &
+
+
+# /usr/lib/x86_64-linux-gnu/torsocks/libtorsocks.so
+
+
+
+# --join-or-start=ff firefox -width 1280 -height 1024 $*
+#!/bin/sh
+#firejail --name=fire --noprofile --x11=xephyr  --net=enp1s5 --netfilter=/etc/firejail/nolocal.net --private firefox &
+
+# https://anyon3.github.io/firejail.html
+# firejail --name=ff --noprofile --net=enp1s5 --netfilter=/etc/firejail/nolocal.net --ip=192.168.178.22 --dns=192.168.178.21:53  --nogroups --x11=xephyr  --machine-id --noroot --caps.drop=all --seccomp  --private-home=~/firejail/ --private-dev --private-tmp --ipc-namespace firefox --new-instance $* & 
+# firejail --noprofile --join=ffbox --net=enp1s5 --ip=192.168.178.22 --netfilter=/etc/firejail/nolocal.net --nogroups --x11=xephyr  --machine-id --noroot --caps.drop=all --seccomp  --private=~/firejail/  --private-dev --private-tmp &
+
+
