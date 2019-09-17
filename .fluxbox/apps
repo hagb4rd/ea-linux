@@ -1,0 +1,64 @@
+[app] (name=fbrun)
+  [Position]	(CENTER)	{0 0}
+  [Layer]	{2}
+[end]
+[app] (name=xfce4-appfinder) (class=Xfce4-appfinder)
+  [Workspace]	{0}
+  [Head]	{1}
+  [Dimensions]	{76% 92%}
+  [Position]	(UPPERLEFT)	{10% 3%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Jump]	{yes}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=Xephyr) (class=Xephyr)
+  [Workspace]	{1}
+  [Head]	{1}
+  [Dimensions]	{100% 104%}
+  [Position]	(UPPERLEFT)	{0% -5%}
+  [Shaded]	{no}
+  [Deco]	{0x5ff}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Jump]	{yes}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=xfce4-terminal) (class=Xfce4-terminal) (role=xfce4-terminal-1568695464--1062682498)
+  [Workspace]	{0}
+  [Head]	{1}
+  [Dimensions]	{64% 51%}
+  [Position]	(UPPERLEFT)	{8% 27%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Jump]	{yes}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]
+[app] (name=thunar) (class=Thunar) (role=Thunar-1568701318-944141493)
+  [Workspace]	{2}
+  [Head]	{1}
+  [Dimensions]	{70% 83%}
+  [Position]	(UPPERLEFT)	{18% 13%}
+  [Shaded]	{no}
+  [Deco]	{NORMAL}
+  [Sticky]	{no}
+  [Minimized]	{no}
+  [Maximized]	{no}
+  [Fullscreen]	{no}
+  [Jump]	{yes}
+  [Layer]	{8}
+  [Alpha]	{255}
+[end]

@@ -5,13 +5,11 @@
 # firejail --name=ff --noprofile --net=enp1s5 --netfilter=/etc/firejail/nolocal.net --ip=192.168.178.22 --dns=192.168.178.21:53  --nogroups --x11=xephyr  --machine-id --noroot --caps.drop=all --seccomp  --private-home=~/firejail/ --private-dev --private-tmp --ipc-namespace firefox --new-instance $* & 
 
 
-if [[ -z "$*" ]]; then
-	mkdir -p ~/firetor/Downloads
-	cp -R ~/firetor/Downloads/* ~/Downloads
-	mkdir -p ~/firetor/Downloads
-	cp -R ~/tor ~/firetor
-	cp -R ~/.fluxbox ~/firetor 
-fi
+cp -R ~/firetor/Downloads/* ~/Downloads
+rm -rf  ~/firetor
+mkdir ~/firetor
+cp -R ~/tor ~/firetor
+
 
 arr=(
 	--name=torbrowser 
@@ -20,7 +18,7 @@ arr=(
 	--noprofile  
 	--nogroups 
 	--x11=xephyr
-	--xephyr-screen=1124x996
+	--xephyr-screen=1276x992
 	--machine-id 
 	--noroot 
 	--caps.drop=all 
@@ -28,10 +26,10 @@ arr=(
 	--private=~/firetor/
 	--private-dev 
 	--private-tmp  
+	--nodbus
 	--ipc-namespace
 	#~/.bin/tor-browser_en-US/Browser/firefox  
-	fluxbox
+	openbox
 )
 
-firejail "${arr[@]}" &
-
+firejail "${arr[@]}"  

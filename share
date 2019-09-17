@@ -1,0 +1,2 @@
+#!/bin/bash
+mount -t 9p -o trans=virtio shared0 /home/lo/media -o version=9p2000.L,posixacl,cache=mmap
