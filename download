@@ -1,4 +1,9 @@
 #!/bin/bash
+
+echo https://www.server-world.info/en/
+echo -------------
+echo https://fossbytes.com/connec-external-pci-express-to-raspberry-pi-4/
+
 echo firefox..
 wget https://download.mozilla.org/?product=firefox-esr-next-latest-ssl&os=linux64&lang=en-US
 echo torbrowser..
@@ -9,3 +14,19 @@ echo vscode ..
 wget https://az764295.vo.msecnd.net/stable/b37e54c98e1a74ba89e03073e5a3761284e3ffb0/code_1.38.1-1568209190_amd64.deb
 echo virtualbox ..
 wget https://download.virtualbox.org/virtualbox/6.0.12/virtualbox-6.0_6.0.12-133076~Debian~stretch_amd64.deb
+
+echo Qubes-r4
+wget https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.0.1-x86_64.iso
+#dd if=Qubes-R3-x86_64.iso of=/dev/sdX bs=1048576 && sync
+#sudo qubes-dom0-update --action=upgrade qubes-template-debian-9
+#sudo qubes-dom0-update --enablerepo=qubes-templates-community --action=upgrade qubes-template-whonix-gw-14
+#sudo qubes-dom0-update --enablerepo=qubes-templates-community --action=upgrade qubes-template-whonix-ws-14
+
+echo Tails
+wget https://mirrors.wikimedia.org/tails/stable/tails-amd64-3.16/tails-amd64-3.16.iso
+wget https://tails.boum.org/tails-signing.key
+https://tails.boum.org/torrents/files/tails-amd64-3.16.iso.sig
+
+
+echo Kali 1104bd669754ccd9585f504bc7071e04729ce8fb35107d77d2922d3fa469a6f4
+wget https://images.offensive-security.com/virtual-images/kali-linux-2019.3a-vbox-amd64.ova
